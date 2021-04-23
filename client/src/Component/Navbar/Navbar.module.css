@@ -1,0 +1,41 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.left{
+    flex: 1;
+}
+
+.left img{
+    width: 100px;
+    float: right;
+    margin-right: 10%;
+}
+
+.right{
+    flex: 1;    
+}
+
+.items a{
+    color: white;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: 200%;
+    font-family: Century Gothic;
+    margin-left: 5px;
+}
+
+.items a:hover{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}

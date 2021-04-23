@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+.componentListModels{
+    text-align: center;
+}
+
+.item{
+    text-decoration:NONE;
+    background-color:hotpink;
+    color: black;
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    font-size:larger;
+}
+
+.item:HOVER{
+    text-decoration: none;
+    background-color: WHITE;
+    color: BLACK;
+    text-align: center;
+    font-family: 'Londrina Solid', cursive;
+    font-size:larger;
+}
+
+.img {
+    border: 5px solid;
+    border-color: white;
+    width: 200px;
+    border-radius: 15px;
+    margin-bottom: 3%
+}
+
+
+.listModels{
+    display:inline-block;
+    margin: 20px;
+}

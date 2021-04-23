@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+
+.modal_wrapper{
+    position: absolute;
+    bottom:0;
+    left:0;
+    right:0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.692);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal {
+    width: 50%;
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    min-width: 80%;
+    position: relative;
+    text-align: center;
+    overflow: auto;
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    color: white;
+  }
+
+  .text {
+    white-space: pre-line;
+    font-size: 100%;
+    margin: 2%;
+    word-wrap: break-word;
+    
+  }
+
+  .test_button{
+    margin: 1%;
+    text-align: center;
+}
+
+  .test_button a{
+    color: GREEN;
+    text-decoration: none;
+    font-weight: 1000;
+    font-size: xx-large;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.test_button a:hover{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    background-color: green;
+}

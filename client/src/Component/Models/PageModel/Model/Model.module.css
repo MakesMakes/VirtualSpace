@@ -1,0 +1,35 @@
+    @import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap');
+    .model{
+        margin-top: 1%;
+        text-align: center;
+    }
+
+    .model iframe{
+        /* position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%); */
+        border: 5px solid;
+        border-color: white;
+        border-radius: 15px;
+        width: 90%;
+        height: 600px;
+    }
+
+    .navl{
+        text-align: center;
+    }
+
+    .item{
+        color: RED;
+        text-decoration: none;
+        font-weight: 1000;
+        font-size: xx-large;
+        font-family: 'Londrina Solid', cursive;
+    }
+
+    .item:hover{
+        color: WHITE;
+        text-decoration: none;
+        background-color: red;
+    }
