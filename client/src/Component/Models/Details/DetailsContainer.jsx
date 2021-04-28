@@ -2,17 +2,14 @@ import {connect} from 'react-redux'
 import axios from 'axios'
 import React from 'react'
 import Details from './Details';
-import { setDetailsAC } from './../../../Redux/detailsPage_Reducer';
+import { setDetailsTC } from './../../../Redux/detailsPage_Reducer';
 import { withRouter } from 'react-router-dom';
 
 
 class DetailsContainer extends React.Component {
     componentDidMount() {
         let id = this.props.match.params.id;
-        axios.get('http://localhost:5000/api/models/' + id + '/details')
-            .then(res => {
-                this.props.setdetails(res.data)
-            })
+        this.props.setDetails(id)
     }
 
     render(){
@@ -32,5 +29,5 @@ let mapStateToProps = (state) => {
 let UrlDetailsContainer = withRouter(DetailsContainer)
 
 export default connect(mapStateToProps,{
-    setdetails: setDetailsAC,
+    setDetails: setDetailsTC,
 })(UrlDetailsContainer);

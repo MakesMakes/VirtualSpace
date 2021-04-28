@@ -1,3 +1,5 @@
+import { detailAPI } from './../DAL/DAL'
+
 const SET_DETAIL = "SET-DETAIL";
 const OPEN_INFO = "OPEN_INFO";
 const SET_INFO = "SET_INFO";
@@ -5,7 +7,8 @@ const CLOSE_INFO = "CLOSE_INFO";
 
 let initialState = {
     detail: [],
-    modal: false
+    modal: false,
+    info: ""
 }
 
 const detailPageReducer = (state = initialState, action) => {
@@ -41,5 +44,21 @@ export const setDetailAC = (detail) => ({ type: SET_DETAIL, detail })
 export const openInfoAC = () => ({ type: OPEN_INFO, payload: true })
 export const setInfoAC = (info) => ({ type: SET_INFO, info })
 export const closeInfoAC = () => ({ type: CLOSE_INFO, payload: false })
+
+export const setDetailTC = (id, detailId) => {
+    return (dispatch) => {
+        detailAPI.getDetail(id, detailId).then(data => {
+            dispatch(setDetailAC(data))
+        })
+    }
+}
+
+export const setInfoTC = (id, detailId) => {
+    return (dispatch) => {
+        detailAPI.getDetail(id, detailId).then(data => {
+            dispatch(setInfoAC(data))
+        })
+    }
+}
 
 export default detailPageReducer;

@@ -1,17 +1,12 @@
 import {connect} from 'react-redux'
-import { setModelsAC } from './../../Redux/modelsPage_Reducer'
-import axios from 'axios'
+import { setModelsTC } from './../../Redux/modelsPage_Reducer'
 import React from 'react'
 import Models from './Models';
 
 
 class ModelsContainer extends React.Component {
     componentDidMount() {
-        axios.get('http://localhost:5000/api/models')
-            .then(res => {
-                debugger;
-                this.props.setmodels(res.data)
-            })
+        this.props.setModels()
     }
 
     render(){
@@ -28,5 +23,5 @@ let mapStateToProps = (state) => {
 }
 
 export default connect(mapStateToProps,{
-    setmodels: setModelsAC,
+    setModels: setModelsTC
 })(ModelsContainer);

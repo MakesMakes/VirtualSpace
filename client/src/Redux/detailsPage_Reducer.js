@@ -1,3 +1,5 @@
+import { detailsAPI } from './../DAL/DAL'
+
 const SET_DETAILS = "SET-DETAILS";
 
 let initialState = {
@@ -18,6 +20,14 @@ const detailsPageReducer = (state = initialState, action) => {
     }
 }
 
-export const setDetailsAC = (details, modelId) => ({ type: SET_DETAILS, details, modelId})
+export const setDetailsAC = (details) => ({ type: SET_DETAILS, details })
+
+export const setDetailsTC = (id) => {
+    return (dispatch) => {
+        detailsAPI.getDetails(id).then(data => {
+            dispatch(setDetailsAC(data))
+        })
+    }
+}
 
 export default detailsPageReducer;

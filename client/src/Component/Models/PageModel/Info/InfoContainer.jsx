@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { openInfoAC, closeInfoAC, setInfoAC } from '../../../../Redux/modelPage_Reducer'
+import { openInfoAC, closeInfoAC, setInfoTC } from '../../../../Redux/modelPage_Reducer'
 import Info from './Info'
 import style from './Info.module.css'
 import axios from 'axios'
@@ -10,16 +10,13 @@ class InfoContainer extends React.Component {
 
     componentDidMount() {
         let id = this.props.match.params.id;
-        axios.get(`http://localhost:5000/api/models/` + id)
-            .then(res => {
-                this.props.setInfo(res.data)
-            })
+        this.props.setInfo(id)
     }
 
     renderModal() {
         if (this.props.modal) {
             return (
-                <Info modal={this.props.info} closeInfo={this.props.closeInfo}/>
+                <Info modal={this.props.info} closeInfo={this.props.closeInfo} />
             )
         }
         return null;
@@ -46,6 +43,6 @@ let UrlInfoContainer = withRouter(InfoContainer)
 
 export default connect(mapStateToProps, {
     openInfo: openInfoAC,
-    setInfo: setInfoAC,
+    setInfo: setInfoTC,
     closeInfo: closeInfoAC
 })(UrlInfoContainer)
