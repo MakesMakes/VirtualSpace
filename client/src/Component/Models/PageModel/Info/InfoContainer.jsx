@@ -24,8 +24,8 @@ class InfoContainer extends React.Component {
     render() {
 
         return (
-            <div className={style.test_button}>
-                <a onClick={this.props.openInfo}>INFORMATION</a>
+            <div >
+                <div className={style.test_button}><a onClick={this.props.openInfo}>INFORMATION</a></div>
                 {this.renderModal()}
             </div>
         );

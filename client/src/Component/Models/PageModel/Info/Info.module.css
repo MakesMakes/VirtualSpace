@@ -44,8 +44,10 @@
   }
 
   .test_button{
-    margin: 1%;
-    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 14%;
 }
 
   .test_button a{

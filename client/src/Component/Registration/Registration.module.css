@@ -1,0 +1,65 @@
+.auth{
+    text-align: center;
+    margin-top: 5%;
+}
+
+.auth h1{
+    color: white;
+    font-size: 500%;
+    font-weight: normal;
+    font-family: Century Gothic;
+}
+
+.auth button{
+    margin-top: 5%;
+    font-family: Century Gothic;
+    font-size: 150%;
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.blockInput{
+    margin: 1%
+}
+
+.input{
+    padding: 1%;
+    border: 1px solid white;
+    background-color: black;
+    color: white;
+}
+
+.input:focus{
+    outline: none;
+    background-color: white;
+    color: black;
+}
+
+.auth button:hover{
+    color: black;
+    background-color: white;
+    cursor: pointer;
+}
+
+.items{
+    margin-top: 1%;
+}
+
+.items a{
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 200%;
+    font-family: Century Gothic;
+    margin-left: 5px;
+}
+
+.items a:hover{
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    background-color: white;
+}

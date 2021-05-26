@@ -3,8 +3,9 @@ const config = require('config')
 const mongoose = require('mongoose')
 
 const app = express()
-const PORT = config.get('port') || 5000
+const PORT = config.get('port')
 const mongoURL = config.get('mongoURL')
+
 
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
@@ -16,8 +17,9 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(express.json());
+app.use(express.json({extended: true}));
 app.use('/api', require('./routes/models.routes'));
+app.use('/api/auth', require('./routes/auth.routes.js'))
 
 async function start() {
     try {
@@ -34,4 +36,6 @@ async function start() {
 }
 
 start()
+
+
 

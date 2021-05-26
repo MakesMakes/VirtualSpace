@@ -39,3 +39,21 @@ export const detailAPI = {
             })
     }
 }
+
+export const registerAPI = {
+    registerUser(email, password){
+        return instance.post('auth/register', {email: email, password: password})
+        .then(res => {
+            return res.data
+        })
+    }
+}
+
+export const loginAPI = {
+    loginUser(email, password){
+        return instance.post('auth/login', {email: email, password: password})
+        .then(res => {
+            return res.data
+        })
+    }
+}
